@@ -11,13 +11,16 @@ services:
 
   redis:
     image: redis:alpine
-    ports: ["6379"]
+    ports: 
+      - "6379:6379"
 
   worker:
     build: ./worker
 
   db:
     image: postgres:9.4
+    ports:
+      - "5432:5432"
 
   result:
     build: ./result
@@ -27,3 +30,4 @@ services:
     ports:
       - "5001:80"
       - "5858:5858"
+      
