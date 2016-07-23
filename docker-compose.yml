@@ -16,6 +16,7 @@ services:
 
   worker:
     build: ./worker
+    env_file: common.env
 
   db:
     image: postgres:9.4

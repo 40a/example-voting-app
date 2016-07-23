@@ -1,4 +1,5 @@
 FROM microsoft/dotnet:1.0.0-preview1
+ENV DB_SERVER=$DB_SERVER
 
 WORKDIR /app
 
